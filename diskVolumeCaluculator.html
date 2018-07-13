@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/jquery/3.1.0/jquery.min.js"></script>
+    <script src= "./diskVolumeCaluculator.js"></script>
+    <link rel="stylesheet" href="elacal.css">
+    <title></title>
+</head>
+<body>
+<h2><span style=color:white>ディスク容量 計算表</span></h2>
+<form>
+<div>
+  <label for="interface">【1】 インターフェース数：</label>
+  <input type="number" id="interface_number" value = "15" min="15" max="10000000" placeholder="15">
+</div>
+<div class="selectWrap">
+  <label for="save">【2】 集約/平均データ保持期間:</label>
+  <select>
+  <option selected value="0">1カ月</option>
+  <option value="">2カ月</option>
+  <option value="">3カ月</option>
+  <option value="">6カ月</option>
+  <option value="">9カ月</option>
+  <option value="">1年</option>
+  <option value="">2年</option>-->
+  <option value="" selected >永遠</option>
+  <select>
+</div>
+<div>
+  <label for="flow">【3】 フローレート：</label>
+  <input type="number" id="flowlate" min="0" max="10000000" placeholder="半角数字" >
+</div>
+<div class="selectWrap">
+  <label for="avrsize">【4】 ローデータ保持期間：</label>
+  <select id="raw_retain_time">
+  <option selected value="0">なし</option>
+  <option value="1">1時間</option>
+  <option value="2">2時間</option>
+  <option value="6">6時間</option>
+  <option value="24">1日</option>
+  <option value="72">3日</option>
+  <option value="336">1週間</option>
+  <option value="672">2週間</option>
+  <option value="744">1ヶ月</option>
+  <option value="1488" disabled>2ヶ月</option>
+  <option value="4464" disabled>6ヶ月</option>
+  <option value="8760" disabled>1年</option>
+  </select>
+</div>
+  <input type="checkbox" id ="highperf" >高性能レポートエンジンを使用する
+</form>
+<h3><p id = "calc_result"><b>想定容量がこちらに表示されます</b></p></h3>
+
+</body>
+</html>

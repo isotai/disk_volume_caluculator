@@ -1,0 +1,154 @@
+
+h1 {
+  /* 青マーカー */
+background: linear-gradient(transparent 70%, #a7d6ff 70%);
+}
+
+h2 {
+  /* 矢印上部分 */
+  position: relative;
+  background-color: #5C5C5C;
+  padding: 0.5em;
+  border-radius: 4px;
+}
+h2::after {
+  /* 矢印下部分 */
+  position: absolute;
+  top: 100%;
+  left: 2em;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-top: 10px solid #5C5C5C;
+}
+
+h3 {
+position: relative;
+padding-left: 25px;
+}
+
+h3:before {
+position: absolute;
+content: '';
+bottom: -3px;
+left: 0;
+width: 0;
+height: 0;
+border: none;
+border-left: solid 15px transparent;
+border-bottom: solid 15px rgb(119, 195, 223);
+}
+h3:after {
+position: absolute;
+content: '';
+bottom: -3px;
+left: 10px;
+width: 100%;
+border-bottom: solid 3px rgb(119, 195, 223);
+}
+
+input[type="number"] {
+  /* テキストボックスの書式をクリア */
+margin: 0;
+padding: 0;
+width: 9em;
+height: 2em;
+background: none;
+border: none;
+border-radius: 0;
+outline: none;
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+}
+
+/*
+input[type="number"] {
+ border-bottom:#E6E6E6 1px solid;
+}
+
+  /* 他の書式はhttp://weblabla.m-pokoj.net/form01/を確認 */
+
+/*
+input[type="number"]:focus {
+  border-bottom:solid 1px #3BB6DB;
+  }
+*/
+
+input[type="number"]{
+  transform:translateX(0px);
+  border-bottom:#FF1493 1px solid;
+ }
+input[type="number"]:focus{
+  border-bottom:#FF1493 1px solid;
+  transform:translateX(20px);
+  opacity:1;
+  transition:all 0.3s;
+ }
+
+form {
+  /* 丸っと外枠 */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
+
+form div + div {
+  /* 間にスペースを入れる */
+    margin-top: 1em;
+}
+
+label {
+    /* すべてのラベルを同じサイズにして、きちんと揃える */
+        margin-right: 10px;
+        width:190px;
+        float: left;
+    }
+
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    width: 140px;
+    height: 30px;
+    background: transparent;
+    position: relative;
+    z-index: 1;
+    padding: 0 40px 0 10px;
+    border: 1px solid #ccc;
+}
+select::-ms-expand {
+    display: none;
+}
+.selectWrap{
+    position: relative;
+    display: inline-block;
+}
+.selectWrap::before{
+    content: '';
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    background: #ccc;
+    height: 100%;
+    width: 30px;
+}
+.selectWrap::after{
+    content: '';
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    right: 9px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 6px 0 6px;
+    border-color: #fff transparent transparent transparent;
+}
